@@ -1,0 +1,30 @@
+# Pantalla
+ANCHO_VENTANA = 1920
+ALTO_VENTANA = 1080
+#Colores
+COLOR_FONDO_R = 30
+COLOR_FONDO_G = 30
+COLOR_FONDO_B = 30
+# Servidor
+SERVIDOR_HOST = "localhost"
+SERVIDOR_PUERTO = 8080
+# Base de datos
+DB_HOST = "127.0.0.1"
+DB_PUERTO = 5432
+DB_USUARIO = "admin"
+DB_NOMBRE = "sistema_db"
+# Rangos
+EDAD_MINIMA = 18
+EDAD_MAXIMA = 99
+HORA_APERTURA = 9
+HORA_CIERRE = 18
+# Opciones válidas
+IDIOMA_1 = "es"
+IDIOMA_2 = "en"
+IDIOMA_3 = "pt"
+# Versión
+VERSION_MAYOR = 2
+VERSION_MENOR = 4
+VERSION_PARCHE = 1
+
+
