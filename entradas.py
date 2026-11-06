@@ -1,4 +1,4 @@
-from funciones import verificar_es_entero, reemplazar_caracteres
+from funciones import verificar_es_entero, reemplazar_caracteres, contar_letras, eliminar_espacios,verificar_es_nombre_propio
 
 def ingresar_cadena(mensaje:str, mensaje_error:str = "ERROR, la cadena no puede estar vacia",cantidad_minima:int = 1):
     cadena = input(mensaje)
@@ -43,3 +43,24 @@ def ingresar_entero_rango(rango:tuple,mensaje:str = "Ingrese un numero: ", mensa
 
     return numero
 
+def ingresar_cadena_letras(mensaje:str, mensaje_error:str = "ERROR, la cadena no puede no tener letras",cantidad_minima:int = 1):
+    cadena = input(mensaje)
+
+    while contar_letras(cadena) < cantidad_minima:
+        print(mensaje_error)
+        cadena = input(mensaje)
+
+    return cadena
+
+def ingresar_nombre_propio(mensaje:str, mensaje_error_1:str = "ERROR, la cadena no puede tener menos de 3 letras",mensaje_error_2:str = "La cadena tiene que tener solo letras",cantidad_minima:int = 3):
+    #Me va a servir para ingresar un nombre o un apellido.
+    nombre_propio = ingresar_cadena_letras(mensaje,mensaje_error_1,cantidad_minima)
+    nombre_propio = eliminar_espacios(nombre_propio)
+
+    while not verificar_es_nombre_propio(nombre_propio):
+        print(mensaje_error_2)
+        nombre_propio = ingresar_cadena_letras(mensaje,mensaje_error_1)
+
+    return nombre_propio
+    #Recomendacion --> Normalizar el nombre
+    # return convertir_titulo(nombre_propio)#mARIANo ezEQUIEL --> Mariano Ezequiel

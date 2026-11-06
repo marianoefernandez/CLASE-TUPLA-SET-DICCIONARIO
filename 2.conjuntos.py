@@ -1,4 +1,6 @@
 from funciones import *
+from salidas import *
+from configuraciones import ASC, DESC
 
 #Los conjuntos son una colección (como las listas,tuplas,diccionarios) pero estas mismas tienen las siguientes caracteristicas
 #1.Sus elementos son unicos (NO SE PUEDEN REPETIR)
@@ -162,9 +164,7 @@ from funciones import *
 #         print(elemento)
 
 
-#region ¿PARA QUE LOS VAMOS A USAR?
-
-#¿PARA QUE LOS VAMOS A USAR?
+#¿PARA QUE LOS VAMOS A USAR LOS CONJUNTOS?
 
 nombres = [
     "Sebastián", "Valentina", "Lucía", "Florencia", "Natalia",
@@ -183,19 +183,28 @@ nombres_2 = [
     "Abril", "Milagros", "Julieta", "Sofía", "Antonella",
     "Catalina", "Constanza", "Valentina", "Guadalupe", "Macarena",
     "Aldana", "Brenda", "Micaela", "Camila", "Rocío",
-    "Ayelén", "Belén", "Carla", "Eugenia", "Gisel",
-    "Noelia", "Paola", "Lucía", "Vanesa", "Emma",
-    "Alexis", "Braian", "Cristian", "Diego", "Santiago",
+    "Ayelén", "Belén", "Carla", "Eugenia", "Sofía",
+    "Noelia", "Tomás", "Lucía", "Lucía", "Camila",
+    "Alexis", "Diego", "Cristian", "Diego", "Santiago",
     "Esteban", "Fernando", "Gonzalo", "Hernán", "Mateo",
-    "Iván", "Javier", "Kevin", "Leonardo", "Marcos",
-    "Nahuel", "Tomás", "Osvaldo", "Pablo", "Rodrigo",
-    "Sergio", "Tobias", "Ulises", "Lucas", "Agustina"
+    "Iván", "Javier", "Lucas", "Leonardo", "Marcos",
+    "Nahuel", "Tomás", "Santiago", "Pablo", "Rodrigo",
+    "Sergio", "Tobias", "Mateo", "Lucas", "Agustina"
 ]
 
-#1)Mostrar los nombres sin repetir
+#1)Mostrar los nombres sin repetir tanto de la lista de nombres y las nombres_2
 
-#2)Mostrar cuantas veces se repite cada nombre
+#a)Con la lista de nombres
+# mostrar_nombres_sin_repetir(nombres)
+#b)Con la lista de nombres_2
+# mostrar_nombres_sin_repetir(nombres_2)
+
+#2)Mostrar cuantas veces se repite cada nombre tanto de la lista de nombres y las nombres_2
+#a)Con la lista de nombres
+#Primero --> Tener la cantidad de nombres sin repetir (eliminar_repeticiones)
+#Segundo --> Sobre la lista original (la que tiene las repeticiones) empezar a contar cuantas veces se encuentra un dato
+#Tercero --> Mostrar ese conteo.
+mostrar_nombres_repetidos(nombres)
 
 #3)Mostrar los nombres que repiten tanto en la lista 1 como en la lista 2
-
-#endregion
+mostrar_nombres_entre_listas(nombres,nombres_2)
